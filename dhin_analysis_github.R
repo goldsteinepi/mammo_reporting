@@ -192,6 +192,12 @@ max(final_data_before_simulation_2022$Mammo_per_1000_census)
 quantile(by(simulation_results_2019$sim_m_avg, simulation_results_2019$Simulation, sum)/sum(final_data_before_simulation_2019$CensusFemaleOver40)*1000, probs=c(0.025,0.5,0.975))
 quantile(by(simulation_results_2022$sim_m_avg, simulation_results_2022$Simulation, sum)/sum(final_data_before_simulation_2022$CensusFemaleOver40)*1000, probs=c(0.025,0.5,0.975))
 
+#method-specific results
+quantile(by(simulation_results_2019$sim_m_eq1, simulation_results_2019$Simulation, sum)/sum(final_data_before_simulation_2019$CensusFemaleOver40)*1000, probs=c(0.025,0.5,0.975))
+quantile(by(simulation_results_2019$sim_m_eq2, simulation_results_2019$Simulation, sum)/sum(final_data_before_simulation_2019$CensusFemaleOver40)*1000, probs=c(0.025,0.5,0.975))
+quantile(by(simulation_results_2022$sim_m_eq1, simulation_results_2022$Simulation, sum)/sum(final_data_before_simulation_2022$CensusFemaleOver40)*1000, probs=c(0.025,0.5,0.975))
+quantile(by(simulation_results_2022$sim_m_eq2, simulation_results_2022$Simulation, sum)/sum(final_data_before_simulation_2022$CensusFemaleOver40)*1000, probs=c(0.025,0.5,0.975))
+
 #sensitivity
 median(by(simulation_results_2019$sim_gamma, simulation_results_2019$GEOID, mean))
 min(by(simulation_results_2019$sim_gamma, simulation_results_2019$GEOID, mean))
